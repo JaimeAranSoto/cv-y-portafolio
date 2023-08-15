@@ -7,6 +7,9 @@
   .badge {
     @apply bg-slate-200 text-indigo-700 font-bold mr-2 px-2.5 py-0.5 rounded;
   }
+  .btn{
+    @apply bg-indigo-600 hover:bg-indigo-900 text-white font-bold rounded-2xl px-3 py-2 select-none
+  }
 }
 /* SHELL ---------------------------------------- */
 html {
