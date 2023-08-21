@@ -1,5 +1,5 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
-import { Link, routeLoader$ } from "@builder.io/qwik-city";
+import { Link, routeLoader$, useLocation } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
 // import Header from "~/components/starter/header/header";
@@ -30,6 +30,7 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   useStyles$(styles);
+  const { url } = useLocation();
   return (
     <>
       <div class="bg-indigo-700 p-8">
@@ -43,13 +44,13 @@ export default component$(() => {
             <a href="https://www.linkedin.com/in/jaimearansoto/" target="_blank"><BsLinkedin />/jaimearansoto</a>
             <a href="https://stivarts.itch.io" target="_blank"><SiItchdotio />stivarts</a>
           </div>
-          <div class="mt-4 flex gap-2">
-            <Link href="/" class="btn">Currículum</Link>
-            <Link href="/portfolio" class="btn">Portafolio</Link>
-          </div>
+          <nav class="mt-4 flex gap-2">
+            <Link href="/" class={url.pathname == "/" ? "btn-selected" : "btn"}>Currículum</Link>
+            <Link href="/portfolio" class={url.pathname == "/portfolio/" ? "btn-selected" : "btn"} > Portafolio</Link>
+          </nav>
           <img width="200" class="absolute right-20 top-3 invisible lg:visible" src="https://sorgardteam.com/img/home/controller.webp" />
         </div>
-      </div>
+      </div >
       <main>
         <Slot />
       </main>

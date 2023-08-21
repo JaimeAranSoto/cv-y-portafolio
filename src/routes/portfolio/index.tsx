@@ -7,21 +7,21 @@ export interface FichaProyectoProps {
 
 export const FichaProyecto = component$<FichaProyectoProps>((props) => {
 
-    const className = "py-4 flex flex-wrap w-10/12 sm:w-1/2 md:w-[30%] h-auto lg:h-96 rounded-2xl shadow-lg hover:shadow-indigo-600 outline outline-offset-2 outline-blue-500"
+    const className = "group py-4 flex flex-wrap w-10/12 sm:w-1/2 md:w-[30%] h-auto lg:h-96 rounded-2xl shadow-lg hover:shadow-indigo-600 outline outline-offset-2 outline-blue-500"
     const background = "linear-gradient(to bottom,black,rgba(0,0,0,0)),url('" + String(props.img) + "')";
     return (
-        <div class={className} key={props.titulo + "-project"} style={{ background: background, backgroundSize: 'cover', backgroundPosition: 'center' }} >
+        <article class={className} key={props.titulo + "-project"} style={{ background: background, backgroundSize: 'cover', backgroundPosition: 'center' }} >
             <div class="text-2xl w-full h-14 px-4 text-center">
                 {props.titulo}<i class="text-sm ml-2">({props.año})</i>
             </div >
 
             <div class="px-4 flex flex-wrap gap-2 items-end">
-                <div class="bg-black bg-opacity-50 rounded-2xl p-3">{props.descripcion}</div>
+                <div class="bg-black bg-opacity-50 rounded-2xl p-3"/*opacity-0 group-hover:opacity-100 transition-all duration-200 select-none"*/>{props.descripcion}</div>
                 <div class="basis-full h-fit flex flex-wrap gap-2">{props.tags.map(element => <span class="badge" key="">{element}</span>)}</div>
                 {props.link &&
                     <a href={props.link} target='_blank' class="btn">Ver proyecto</a>}
             </div>
-        </div >
+        </article >
     );
 });
 
@@ -29,7 +29,7 @@ export default component$(() => {
     return (
         <section class="max-w-screen-xl m-auto mt-4">
             <div class="bg-indigo-900 p-4 rounded-2xl text-center m-auto" role="banner">
-                <p class="font-bold">Bienvenid@ a mi portafolio</p>
+                <p class="font-bold">Bienvenid@ a mi portafolio 👋</p>
                 <p class="text-sm">Aquí podrás ver algunos de los proyectos en los que he participado.</p>
             </div>
             <section class="flex m-auto gap-10 flex-wrap my-8 justify-center">
