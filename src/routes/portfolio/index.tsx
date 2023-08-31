@@ -7,16 +7,17 @@ export interface FichaProyectoProps {
 
 export const FichaProyecto = component$<FichaProyectoProps>((props) => {
 
-    const className = "group py-4 flex flex-wrap w-10/12 sm:w-1/2 md:w-[30%] h-auto lg:h-96 rounded-2xl shadow-lg hover:shadow-indigo-600 outline outline-offset-2 outline-blue-500"
-    const background = "linear-gradient(to bottom,black,rgba(0,0,0,0)),url('" + String(props.img) + "')";
+    const className = "group bg-slate-300 flex flex-wrap w-10/12 sm:w-1/2 md:w-[30%] h-auto rounded-2xl shadow-lg transition hover:shadow-indigo-600 duration-100 outline outline-blue-500 ring-4 ring-slate-50 ring-inset"
     return (
-        <article class={className} key={props.titulo + "-project"} style={{ background: background, backgroundSize: 'cover', backgroundPosition: 'center' }} >
-            <div class="text-2xl w-full h-14 px-4 text-center">
-                {props.titulo}<i class="text-sm ml-2">({props.año})</i>
-            </div >
+        <article class={className} key={props.titulo + "-project"} >
+            <div class="transition-all w-full h-48 bg-[length:auto_100%] bg-center group-hover:bg-[length:auto_110%] duration-300" style={{ backgroundImage: `url('${props.img}')` }} >
+                <div class="text-2xl w-full px-4 py-1 text-center bg-gradient-to-b from-black to-[rgba(0,0,0,0.3)] bg-opacity-80">
+                    {props.titulo}<i class="text-sm ml-2">({props.año})</i>
+                </div >
+            </div>
 
-            <div class="px-4 flex flex-wrap gap-2 items-end">
-                <div class="bg-black bg-opacity-50 rounded-2xl p-3"/*opacity-0 group-hover:opacity-100 transition-all duration-200 select-none"*/>{props.descripcion}</div>
+            <div class="p-4 flex flex-wrap gap-2 items-start h-auto text-slate-950 ">
+                <div>{props.descripcion}</div>
                 <div class="basis-full h-fit flex flex-wrap gap-2">{props.tags.map(element => <span class="badge" key="">{element}</span>)}</div>
                 {props.link &&
                     <a href={props.link} target='_blank' class="btn">Ver proyecto</a>}
@@ -148,7 +149,7 @@ export const head: DocumentHead = {
     meta: [
         {
             name: "description",
-            content: "Perfil del desarrollador de videojuegos Jaime Arancibia.",
+            content: "Portafolio de videojuegos desarrollados y proyectos en los que ha participado Jaime Arancibia Soto.",
         },
     ],
 };
