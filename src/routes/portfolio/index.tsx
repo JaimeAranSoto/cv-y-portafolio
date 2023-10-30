@@ -179,7 +179,7 @@ export default component$(() => {
                     link='https://invadelab.cl/portfolio/pasapalabra-lenovo/'
                 />
                 <FichaProyecto
-                    titulo='Bioinformática Virtual: Geocatching y Trivia'
+                    titulo='Bioinformática Virtual: Geocaching y Trivia'
                     año={2021}
                     descripcion='Aplicación con temática de Bioinformática en que el usuario debe buscar códigos QR localizados en un establecimiento y responder preguntas para coleccionar medallas.'
                     tags={["Unity", "Programación", "Realidad Aumentada", "Mobile"]}
