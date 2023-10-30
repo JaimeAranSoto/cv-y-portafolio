@@ -59,7 +59,7 @@ export default component$(() => {
           <Dato titulo="Sobre mi" contenido="Apasionado por la creatividad en videojuegos y música.
         Mi camino fusiona ambos mundos, explorando la síntesis perfecta. Mi habilidad para aprender rápidamente y
         comunicarme entre departamentos aporta perspectivas únicas al desarrollo. Creé videojuegos de distintas escalas y
-        establecí mi empresa de software interactivo. Emocionado por seguir innovando y aportando a esta industria que amo."/>
+        establecí mi empresa de software interactivo. Emocionado por seguir innovando y aportando a esta industria."/>
 
 
           <Dato titulo="Experiencia profesional" />
@@ -89,7 +89,9 @@ export default component$(() => {
         <div class="w-fit md:w-2/5">
           <Dato titulo="Habilidades" />
           <div class="flex flex-wrap gap-2 [&>*]:badge">
-            {["Unity 3D", "C#", "Adobe Suite", "Moho Pro", "FL Studio", "Godot", "Unreal Engine", "Python", "Javascript", "React", "Qwik"].map((element) => <p key={"badge-" + element}>{element}</p>)}
+            {["Unity 3D (Avanzado)", "Godot (Intermedio)", "Unreal Engine (Intermedio)",
+              "C#", "Python", "Javascript", "Java",
+              "React", "Qwik", "Aseprite", "Adobe Suite", "Moho Pro", "FL Studio", "Blender"].map((element) => <p key={"badge-" + element}>{element}</p>)}
           </div>
           <Dato titulo="Fortalezas" />
           <BloqueConIcono titulo="Aprendizaje constante" contenido="Puedo adaptarme a nuevas técnicas y tecnologías.">
@@ -123,5 +125,10 @@ export const head: DocumentHead = {
       name: "description",
       content: "Perfil del desarrollador de videojuegos Jaime Arancibia.",
     },
+    {
+        property: "og:image",
+        content: "/img/media/meta-preview-jaime-arancibia-cv.png",
+    }
+  
   ],
 };
