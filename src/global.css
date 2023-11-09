@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
 /**
  * Tailwind CSS imports
  * View the full documentation at https://tailwindcss.com
@@ -14,7 +15,6 @@
  *
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --qwik-dark-blue: #006ce9;

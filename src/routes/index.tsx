@@ -57,13 +57,16 @@ export default component$(() => {
       <section class="md:flex gap-10 p-2 md:p-6  text-slate-950 max-w-screen-xl m-auto">
         <div class="w-fit md:w-3/5">
           <Dato titulo="Sobre mi" contenido="Apasionado por la creatividad en videojuegos y música.
-        Mi camino fusiona ambos mundos, explorando la síntesis perfecta. Mi habilidad para aprender rápidamente y
-        comunicarme entre departamentos aporta perspectivas únicas al desarrollo. Creé videojuegos de distintas escalas y
-        establecí mi empresa de software interactivo. Emocionado por seguir innovando y aportando a esta industria."/>
+          Mi habilidad para aprender rápidamente y
+          comunicarme entre departamentos aporta perspectivas únicas al desarrollo. Creé videojuegos de distintas escalas y
+          establecí mi empresa de software interactivo. Emocionado por seguir innovando y aportando a esta industria."/>
 
 
           <Dato titulo="Experiencia profesional" />
 
+          <BloqueDato titulo="Programador" desde="11/2023" hasta="Actualidad" subtitulo="RioLab" lugar="Talca - Santiago, CL"
+            contenido="Desarrollo de variado software interactivo utilizando diversas tecnologías. Participación en un equipo grande con profesionales
+            de diversas áreas." />
           <BloqueDato titulo="Programador" desde="07/2023" hasta="08/2022" subtitulo="MauleTec" lugar="Talca, CL"
             contenido="Desarrollo de distintos proyectos interactivos en Unity 3D, como la mejora de un museo interactivo sobre la Región del Maule, una experiencia abierta
             en una laguna en un entorno virtual y una aplicación orientada a la detección temprana de neurodivergencias en niños y niñas." />
@@ -126,9 +129,9 @@ export const head: DocumentHead = {
       content: "Perfil del desarrollador de videojuegos Jaime Arancibia.",
     },
     {
-        property: "og:image",
-        content: "/img/media/meta-preview-jaime-arancibia-cv.png",
+      property: "og:image",
+      content: "/img/media/meta-preview-jaime-arancibia-cv.png",
     }
-  
+
   ],
 };
