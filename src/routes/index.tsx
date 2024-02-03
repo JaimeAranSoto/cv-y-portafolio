@@ -90,11 +90,11 @@ export default component$(() => {
           <BloqueDato titulo="Grau en Disseny i Desenvolupament de Videojocs" desde="2019" hasta="2020" subtitulo="Universitat de Girona" lugar="Girona, ES" />
         </div>
         <div class="w-fit md:w-2/5">
-          <Dato titulo="Habilidades" />
+          <Dato titulo="Conocimientos" />
           <div class="flex flex-wrap gap-2 [&>*]:badge">
             {["Unity 3D (Avanzado)", "Godot (Intermedio)", "Unreal Engine (Intermedio)",
-              "C#", "Python", "Javascript", "Java",
-              "React", "Qwik", "Aseprite", "Adobe Suite", "Moho Pro", "FL Studio", "Blender"].map((element) => <p key={"badge-" + element}>{element}</p>)}
+              "C#", "Python", "Javascript/Typescript", "Java",
+              "React","React Native","Next.js","Astro", "Qwik","Tailwind CSS", "Aseprite", "Adobe Suite", "Moho Pro", "FL Studio", "Blender"].map((element) => <p key={"badge-" + element}>{element}</p>)}
           </div>
           <Dato titulo="Fortalezas" />
           <BloqueConIcono titulo="Aprendizaje constante" contenido="Puedo adaptarme a nuevas técnicas y tecnologías.">

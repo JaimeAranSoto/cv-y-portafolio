@@ -35,9 +35,12 @@ export default component$(() => {
     <>
       <div class="bg-indigo-700 p-8">
         <div class="max-w-screen-xl m-auto">
-          <h2 class="text-start">Jaime Arancibia</h2>
-          <h3 class="text-lg flex items-center">Game Developer y Músico <InCode class="mx-3" /><BsMusicNote /></h3>
-          <div class="md:flex gap-3 mt-4 flex flex-wrap [&>*]:flex [&>*]:gap-2 [&>*]:items-center">
+          <div class="flex-col sm:flex-row  flex gap-2 items-center mb-4">
+            <img src="img/photos/jaime.jpg" width="512" height="512" class="w-1/2 h-1/2 sm:w-16 sm:h-16 object-cover rounded-full" alt="Jaime Arancibia, foto de perfil" />
+            <h2 class="text-center sm:text-start leading-none">Jaime Arancibia</h2>
+          </div>
+          <h3 class="flex text-lg text-center justify-center sm:text-start sm:items-center sm:justify-start">Game Developer y Músico <span class="hidden sm:flex"><InCode class="mx-3" /><BsMusicNote /></span></h3>
+          <div class="flex gap-3 mt-4 flex-wrap [&>*]:flex [&>*]:gap-2 [&>*]:items-center">
             <div><LuPhone />+56 9 77908750</div>
             <div><LuMail />jaimearansoto@gmail.com</div>
             <div><BsGeoAltFill />Talca, CL</div>

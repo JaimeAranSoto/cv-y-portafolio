@@ -43,6 +43,7 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@qwikest/icons": "^0.0.8"
+    "@qwikest/icons": "^0.0.8",
+    "node": "^21.6.1"
   }
 }
